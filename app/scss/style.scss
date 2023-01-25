@@ -6,7 +6,7 @@
 
 
 .header {
-  background-color: F2F2F2;
+  background-color: #f2f2f2;
   padding-top: 50px;
 
   &__menu {
@@ -46,7 +46,7 @@
   &__hero-wrapper {
     max-width: 493px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     padding-bottom: 30px;
   }
 
@@ -98,6 +98,122 @@
   }
 }
 
+.brands {
+  padding-bottom: 216px;
+  padding-top: 76px;
+  background-image: url('../images/lines/1.svg');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 0 -212px;
+  &__container {
+      max-width: 1130px;
+      margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+.spec {
+  padding-bottom: 140px;
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'Gilroy-Medium';
+    font-size: 45px;
+    line-height: 53px;
+    color: #313131;
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    max-width: 808px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    max-width: 384px;
+    padding: 40px 30px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+    transition: all .5s;
+  }
+
+  &__item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1);
+    border-radius: 5px;
+  }
+
+  &__item-title {
+    font-family: 'Gilroy-SemiBold';
+    font-size: 22px;
+    line-height: 147.9%;
+    color: #313131;
+    padding-left: 43px;
+    margin-bottom: 30px;
+     height: 42px;
+  }
+
+  &__item-title--webflow {
+    background-image: url('../images/specIcons/1.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__item-title--shopify {
+     background-image: url('../images/specIcons/2.svg');
+     background-repeat: no-repeat;
+  }
+
+  &__item-title--figma {
+     background-image: url('../images/specIcons/3.svg');
+     background-repeat: no-repeat;
+    
+  }
+
+  &__item-title--php {
+     background-image: url('../images/specIcons/4.svg');
+     background-repeat: no-repeat;
+  }
+
+  &__item-text {
+    line-height: 147.9%;
+    margin-bottom: 30px;
+  }
+
+  &__item-link {
+    text-decoration: underline;
+    color: #313131;
+    transition: all .5s;
+  }
+
+  &__item-link:hover {
+    color: #49AD09;
+  }
+
+  &__btn {
+    display: block;
+    text-align: center;
+    max-width: 225px;
+    margin: 0 auto;
+  }
+}
 
 
 
@@ -182,6 +298,37 @@
         transform: rotate(87deg);
         top: 0px;
       }
+    }
+  }
+}
+
+@media (max-width: 556px) {
+  .brands {
+    padding-top: 0;
+    padding-bottom: 96px;
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      max-width: 133px;
+      margin: 0 auto;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .spec {
+    padding-bottom: 96px;
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      text-align: center;
+      margin: 0 auto;
     }
   }
 }
