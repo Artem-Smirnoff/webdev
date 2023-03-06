@@ -261,15 +261,12 @@
 }
 
 .customer {
+  margin-bottom: 140px;
 
   background-image: url('../images/lines/4.svg');
   background-repeat: no-repeat;
   background-position: 86% 6%;
 
-  &__container {
-    max-width: 1170px;
-    margin: 0 auto;
-  }
 
   &__slider {
     height: 540px;
@@ -351,7 +348,8 @@
 .slick-next:hover,
 .slick-prev:hover {
   background-color: #313131;
-  path{
+
+  path {
     fill: #FFFFFF;
   }
 }
@@ -383,6 +381,193 @@
 
 .slick-dots li:not(:last-child) {
   margin-right: 15px;
+}
+
+.price {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 140px;
+  }
+
+  &__item {
+    max-width: 362px;
+    width: 100%;
+    padding: 50px 5px;
+    border: 1px solid #EDEDED;
+    background-color: #FFFFFF;
+    transition: box-shadow .3s;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 42px;
+  }
+
+  &__item-title {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  &__item-price {
+    font-family: 'Gilroy-Semibold';
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    color: #313131;
+    margin-bottom: 24px;
+  }
+
+  &__items {
+    height: 144px;
+    margin-bottom: 53px;
+    max-width: 259px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__items-item {
+    padding-left: 28px;
+    font-size: 16px;
+    background-image: url('../images/icons/price__list.svg');
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+
+  }
+
+  &__item:hover {
+    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1);
+    background-color: #EDEDED;
+  }
+
+  &__items-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: block;
+    max-width: 225px;
+    padding: 19px 50px;
+    text-align: center;
+    margin: 0 auto;
+    color: #514040;
+    background-color: #EDEDED;
+    border: 1px solid #514040;
+    border-radius: 5px;
+    transition: all .3s;
+  }
+
+  &__button:hover {
+    background-color: #49AD09;
+    color: #f2f2f2;
+    border: 1px solid transparent;
+  }
+
+}
+
+.grow {
+  text-align: center;
+  margin-bottom: 127px;
+
+  &__title {
+    margin: 0 auto 53px;
+    max-width: 425px;
+  }
+
+  &__button {
+    display: inline-block;
+  }
+}
+
+.footer {
+  &__logo {
+    margin-bottom: 35px;
+    display: block;
+  }
+
+  &__text {
+    max-width: 236px;
+    margin-bottom: 64px;
+    font-size: 16px;
+    line-height: 100%;
+    color: #313131;
+  }
+
+  &__title {
+    font-family: 'Gilroy-SemiBold';
+    font-size: 20px;
+    line-height: 23px;
+    color: #1C1C1D;
+    margin-bottom: 39px;
+  }
+
+  &__item-link {
+    font-size: 16px;
+    line-height: 100%;
+    color: #313131;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__input {
+    padding: 12px;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input::placeholder {
+    font-family: 'Gilroy-Medium';
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__button {
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    background-image: url('../images/icons/input-arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+.footer-top {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #F2F2F2;
+    border-radius: 5px;
+    text-align: center;
+  }
 }
 
 // -------------------------------------------------MEDIA-----------------------------------------
@@ -497,11 +682,50 @@
   }
 
   .customer {
+    margin-bottom: 0;
     &__slider-item {
       max-width: 100%;
       text-align: center;
     }
   }
+
+  .footer-top {
+    &__list {
+      display: block;
+      width: 100%;
+    }
+
+    &__item {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 70px;
+    }
+    
+  }
+
+  .footer {
+    &__logo {
+      display: inline-block;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__form {
+      max-width: 174px;
+      margin: 0 auto;
+    }
+  }
+
+  .social {
+    max-width: 114px;
+    margin: 0 auto;
+  }
+  
 }
 
 
@@ -535,6 +759,10 @@
       text-align: center;
       margin: 0 auto;
     }
+  }
+
+  .slick-list {
+    padding-top: 30px;
   }
 }
 
